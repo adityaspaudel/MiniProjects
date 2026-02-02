@@ -105,14 +105,30 @@ const Home = () => {
 		));
 
 	return (
-		<div className="min-h-screen text-black bg-cyan-200 p-6">
-			<h1 className="text-4xl font-bold mb-8 text-center text-black">
-				React Projects Hub
+		<div className="min-h-screen text-black bg-cyan-900 p-6 flex flex-col justify-center items-center">
+			<h1 className="text-4xl font-bold mb-8 text-center text-green-100 hover:scale-[1.05] transition 1s">
+				React Mini Projects
 			</h1>
 
-			<div className="flex flex-col md:flex-row md:justify-between gap-8">
+			<div className="flex flex-col md:flex-row md:justify-between gap-8 w-full px-20">
 				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-black text-center">
+					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+						Utility Apps
+					</h2>
+					<div className="flex flex-col flex-wrap gap-4 justify-center">
+						{renderCards(utilityApps, "utilityApps")}
+					</div>
+				</div>
+				<div className="flex-1">
+					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+						Redux Apps
+					</h2>
+					<div className="flex flex-col flex-wrap gap-4 justify-center">
+						{renderCards(reduxApps, "reduxApps")}
+					</div>
+				</div>
+				<div className="flex-1">
+					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
 						Games
 					</h2>
 					<div className="flex flex-col flex-wrap gap-4 justify-center">
@@ -121,25 +137,7 @@ const Home = () => {
 				</div>
 
 				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-black text-center">
-						Redux Apps
-					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
-						{renderCards(reduxApps, "reduxApps")}
-					</div>
-				</div>
-
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-black text-center">
-						Utility Apps
-					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
-						{renderCards(utilityApps, "utilityApps")}
-					</div>
-				</div>
-
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-black text-center">
+					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
 						Custom Hooks
 					</h2>
 					<div className="flex flex-col flex-wrap gap-4 justify-center">
