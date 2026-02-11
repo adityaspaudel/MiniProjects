@@ -23,6 +23,7 @@ const Home = () => {
 		"17-racingGame",
 		"18-ticTacToe-v2",
 	];
+
 	const customHooks = [
 		"1-counter",
 		"2-menuToggler",
@@ -34,6 +35,7 @@ const Home = () => {
 		"8-useAuthApp",
 		"9-infiniteScroll",
 	];
+
 	const reduxApps = [
 		"1-counter",
 		"2-notesApp",
@@ -62,7 +64,6 @@ const Home = () => {
 		"5-counter",
 		"6-currencyConverter",
 		"7-digitalWatch",
-		// "8-formValidator",
 		"9-matrixGenerator",
 		"10-musicPlayer",
 		"11-passwordGenerator",
@@ -98,49 +99,60 @@ const Home = () => {
 	const renderCards = (items, basePath) =>
 		items.map((item, idx) => (
 			<Link href={`/${basePath}/${item}`} key={idx}>
-				<div className="bg-gray-100 hover:font-semibold hover:bg-green-600 hover:text-white shadow-gray-400 shadow rounded-lg px-8 py-4 hover:scale-105 hover:shadow-md transition-transform cursor-pointer ">
+				<div
+					className="bg-gray-100 hover:bg-green-600 hover:text-white 
+					shadow rounded-lg px-4 py-3 text-sm sm:text-base
+					hover:scale-105 transition cursor-pointer text-center"
+				>
 					{item}
 				</div>
 			</Link>
 		));
 
 	return (
-		<div className="min-h-screen text-black bg-cyan-900 p-6 flex flex-col justify-center items-center">
-			<h1 className="text-4xl font-bold mb-8 text-center text-green-100 hover:scale-[1.05] transition 1s">
+		<div className="min-h-screen bg-cyan-900 text-black p-4 sm:p-6">
+			<h1 className="text-2xl sm:text-4xl font-bold mb-6 sm:mb-10 text-center text-green-100">
 				React Mini Projects
 			</h1>
 
-			<div className="flex flex-col md:flex-row md:justify-between gap-8 w-full px-20">
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+			{/* Responsive grid */}
+			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+				{/* Utility Apps */}
+				<div>
+					<h2 className="text-xl sm:text-2xl font-semibold mb-4 text-green-100 text-center">
 						Utility Apps
 					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
+					<div className="flex flex-col gap-3 max-h-[120vh] overflow-y-auto pr-1">
 						{renderCards(utilityApps, "utilityApps")}
 					</div>
 				</div>
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+
+				{/* Redux Apps */}
+				<div>
+					<h2 className="text-xl sm:text-2xl font-semibold mb-4 text-green-100 text-center">
 						Redux Apps
 					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
+					<div className="flex flex-col gap-3 max-h-[120vh] overflow-y-auto pr-1">
 						{renderCards(reduxApps, "reduxApps")}
 					</div>
 				</div>
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+
+				{/* Games */}
+				<div>
+					<h2 className="text-xl sm:text-2xl font-semibold mb-4 text-green-100 text-center">
 						Games
 					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
+					<div className="flex flex-col gap-3 max-h-[120vh] overflow-y-auto pr-1">
 						{renderCards(games, "games")}
 					</div>
 				</div>
 
-				<div className="flex-1">
-					<h2 className="text-2xl font-semibold mb-4 text-green-100 hover:scale-[1.05] transition 1s text-center">
+				{/* Custom Hooks */}
+				<div>
+					<h2 className="text-xl sm:text-2xl font-semibold mb-4 text-green-100 text-center">
 						Custom Hooks
 					</h2>
-					<div className="flex flex-col flex-wrap gap-4 justify-center">
+					<div className="flex flex-col gap-3 max-h-[120vh] overflow-y-auto pr-1">
 						{renderCards(customHooks, "customHooks")}
 					</div>
 				</div>
